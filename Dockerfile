@@ -1,6 +1,7 @@
 FROM nginx:1.27-alpine
 
-# Свій головний конфіг. pid лежить у /var/cache/nginx: /tmp у цьому образі nginx не може писати.
+# Свій головний конфіг. Pid у /var/cache/nginx, каталог відкритий на запис
+# будь-якому uid: Coolify може запустити контейнер не від користувача nginx.
 COPY nginx.main.conf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
@@ -18,6 +19,9 @@ RUN mkdir -p \
         /var/cache/nginx/uwsgi_temp \
         /var/cache/nginx/scgi_temp \
     && chown -R nginx:nginx /var/cache/nginx \
+    && chmod -R 777 /var/cache/nginx \
+    && touch /var/cache/nginx/nginx.pid \
+    && chmod 666 /var/cache/nginx/nginx.pid \
     && nginx -t
 
 USER nginx
