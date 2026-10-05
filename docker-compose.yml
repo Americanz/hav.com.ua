@@ -15,6 +15,7 @@ services:
     environment:
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
       TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+      SITE_URL: ${SITE_URL:-https://hav.com.ua}
     expose:
       - "8080"
     restart: unless-stopped
