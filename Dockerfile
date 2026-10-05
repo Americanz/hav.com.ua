@@ -1,6 +1,6 @@
 FROM nginx:1.27-alpine
 
-# Свій головний конфіг: pid і тимчасові файли в /tmp, бо процес не root.
+# Свій головний конфіг. pid лежить у /var/cache/nginx: /tmp у цьому образі nginx не може писати.
 COPY nginx.main.conf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
@@ -12,12 +12,12 @@ COPY --chown=nginx:nginx js /usr/share/nginx/html/js
 COPY --chown=nginx:nginx img /usr/share/nginx/html/img
 
 RUN mkdir -p \
-        /tmp/nginx/client_temp \
-        /tmp/nginx/proxy_temp \
-        /tmp/nginx/fastcgi_temp \
-        /tmp/nginx/uwsgi_temp \
-        /tmp/nginx/scgi_temp \
-    && chown -R nginx:nginx /tmp/nginx \
+        /var/cache/nginx/client_temp \
+        /var/cache/nginx/proxy_temp \
+        /var/cache/nginx/fastcgi_temp \
+        /var/cache/nginx/uwsgi_temp \
+        /var/cache/nginx/scgi_temp \
+    && chown -R nginx:nginx /var/cache/nginx \
     && nginx -t
 
 USER nginx
