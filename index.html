@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk" class="booting">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HAV — Cloud Architecture Technologies</title>
+<meta name="description" content="HAV — проектуємо, впроваджуємо та оптимізуємо хмарні рішення для бізнесу. Архітектура майбутнього." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="home">
+
+<header id="header">
+  <div class="container nav">
+    <a href="/" class="logo">HAV</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Послуги</a>
+      <a href="/erp">ERP</a>
+      <a href="/bas">BAS</a>
+      <a href="/odoo">Odoo</a>
+      <a href="#contact">Контакти</a>
+      <a href="#contact" class="btn btn-primary">Консультація</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Консультація</a>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="badge" id="heroBadge"></span>
+      <h1 id="heroTitle"></h1>
+      <p id="heroLead"></p>
+      <div class="hero-cta" id="heroCta"></div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <span class="section-tag" id="servicesTag"></span>
+      <h2 class="section-title" id="servicesTitle"></h2>
+      <p class="section-sub" id="servicesSub"></p>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <section id="systems">
+    <div class="container">
+      <span class="section-tag" id="systemsTag"></span>
+      <h2 class="section-title" id="systemsTitle"></h2>
+      <p class="section-sub" id="systemsSub"></p>
+      <div class="services-grid" id="systemsGrid"></div>
+    </div>
+  </section>
+
+  <section id="tech">
+    <div class="container">
+      <div class="center-copy">
+        <span class="section-tag" id="techTag"></span>
+        <h2 class="section-title" id="techTitle"></h2>
+        <p class="section-sub" id="techSub"></p>
+      </div>
+      <div class="tech-grid reveal" id="techGrid"></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <span class="section-tag" id="processTag"></span>
+      <h2 class="section-title" id="processTitle"></h2>
+      <p class="section-sub" id="processSub"></p>
+      <div class="process" id="processGrid"></div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="container">
+      <span class="section-tag" id="casesTag"></span>
+      <h2 class="section-title" id="casesTitle"></h2>
+      <p class="section-sub" id="casesSub"></p>
+      <div class="cases" id="casesGrid"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div class="center-copy">
+          <span class="section-tag" id="contactTag"></span>
+          <h2 class="section-title" id="contactTitle"></h2>
+          <p class="section-sub" id="contactSub" style="margin-bottom:0"></p>
+        </div>
+        <form id="contactForm">
+          <div class="hp" aria-hidden="true">
+            <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label class="field">
+            <span>Ім'я</span>
+            <input type="text" name="name" autocomplete="name" maxlength="80" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" maxlength="120" required>
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" autocomplete="tel" maxlength="40">
+          </label>
+          <label class="field">
+            <span>Задача</span>
+            <textarea name="message" rows="4" maxlength="4000"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Відправити запит →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">HAV</div>
+        <p id="footerTagline"></p>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="#services">Послуги</a></li>
+          <li><a href="/erp">ERP</a></li>
+          <li><a href="/bas">BAS</a></li>
+          <li><a href="/odoo">Odoo</a></li>
+          <li><a href="#cases">Кейси</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul id="footerContacts"></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <!-- Email у noscript тримайте разом із contact.email у content.json -->
+      <span id="copyright"></span>
+      <span id="footerSite"></span>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+  <p class="noscript">Щоб переглянути сторінку, увімкніть JavaScript. Заявку можна надіслати на hello@hav.com.ua</p>
+</noscript>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

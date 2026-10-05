@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BAS — HAV</title>
+<meta name="description" content="HAV впроваджує BAS: бухгалтерія, торгівля, КУП і BAS ERP. Перенесення з 1С, обміни і супровід." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="bas">
+
+<header id="header">
+  <div class="container nav">
+    <a href="/" class="logo">HAV</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#services">Послуги</a>
+      <a href="/erp">ERP</a>
+      <a href="/bas" class="is-active">BAS</a>
+      <a href="/odoo">Odoo</a>
+      <a href="#contact">Контакти</a>
+      <a href="#contact" class="btn btn-primary">Консультація</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Консультація</a>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container hero-inner">
+      <span class="badge">BAS</span>
+      <h1>Впровадження <span>BAS</span> для українського обліку</h1>
+      <p class="lead">Запускаємо BAS під процеси компанії: бухгалтерія, управління торгівлею, КУП або BAS ERP. Переносимо дані з 1С, налаштовуємо обміни і лишаємось на супроводі.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Обговорити BAS →</a>
+        <a href="/" class="btn btn-ghost">На головну</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-tag">Що входить</span>
+      <h2 class="section-title">Конфігурація під вашу роботу</h2>
+      <p class="section-sub">Не ставимо «типову» базу і не залишаємо з нею наодинці. Контур збирається з того, чим компанія реально користується щодня.</p>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Бухгалтерія і торгівля</h3>
+          <p>BAS Бухгалтерія, Управління торгівлею і суміжні конфігурації: первинні документи, склади, взаєморозрахунки, звітність.</p>
+        </article>
+        <article class="service">
+          <h3>BAS ERP і КУП</h3>
+          <p>Для компаній, де обліку продажів уже мало: виробництво, закупівлі, фінанси і планування в одній системі.</p>
+        </article>
+        <article class="service">
+          <h3>Перенесення з 1С</h3>
+          <p>Довідники, залишки і потрібні документи. Запуск плануємо так, щоб операційна робота не зупинялась на час переходу.</p>
+        </article>
+        <article class="service">
+          <h3>Обміни і супровід</h3>
+          <p>Інтеграція з сайтом, банком і зовнішніми сервісами. Далі — оновлення, доопрацювання, резервні копії і розміщення.</p>
+        </article>
+      </div>
+      <div class="related">
+        <a href="/erp">Дивитись ERP</a>
+        <a href="/odoo">Дивитись Odoo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div class="center-copy">
+          <span class="section-tag">Зв'язок</span>
+          <h2 class="section-title">Обговорити BAS</h2>
+          <p class="section-sub" style="margin-bottom:0">Напишіть, яка конфігурація потрібна і чи є зараз 1С. Відповімо протягом 24 годин.</p>
+        </div>
+        <form id="contactForm">
+          <input type="hidden" name="topic" value="BAS">
+          <div class="hp" aria-hidden="true">
+            <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label class="field"><span>Ім'я</span><input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" maxlength="120" required></label>
+          <label class="field"><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" maxlength="40"></label>
+          <label class="field"><span>Задача</span><textarea name="message" rows="4" maxlength="4000"></textarea></label>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Відправити запит →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">HAV</div>
+        <p id="footerTagline">Cloud Architecture Technologies. Архітектура майбутнього для вашого бізнесу.</p>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="/#services">Послуги</a></li>
+          <li><a href="/erp">ERP</a></li>
+          <li><a href="/bas">BAS</a></li>
+          <li><a href="/odoo">Odoo</a></li>
+          <li><a href="/#contact">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul id="footerContacts">
+          <li><a href="mailto:hello@hav.com.ua">hello@hav.com.ua</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span id="copyright"></span>
+      <span id="footerSite"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

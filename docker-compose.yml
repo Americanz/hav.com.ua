@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    depends_on:
+      leads:
+        condition: service_healthy
+    restart: unless-stopped
+
+  leads:
+    build: ./leads
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+    expose:
+      - "8080"
+    restart: unless-stopped
