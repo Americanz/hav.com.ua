@@ -2,6 +2,8 @@
 .gitignore
 .github
 leads
+docker-compose.yml
+docker-compose.dev.yml
 node_modules
 README.md
 .env

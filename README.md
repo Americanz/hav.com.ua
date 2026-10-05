@@ -33,7 +33,7 @@ docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
 
-Домен вказуйте сервісу `web`, порт контейнера `80`. Сервіс `leads` без домену: його бачить лише Nginx.
+Домен вказуйте сервісу `web`, порт контейнера `8080`. Сервіс `leads` без домену: його бачить лише Nginx.
 
 ## Telegram
 
