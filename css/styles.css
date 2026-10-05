@@ -70,13 +70,12 @@ header.scrolled { border-bottom-color: var(--border); }
   gap: 16px;
 }
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700; font-size: 24px;
-  letter-spacing: 3px;
-  background: linear-gradient(135deg, #00D4FF, #0055FF);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
 }
+.logo img { height: 42px; width: auto; display: block; }
+.footer-brand .logo img { height: 96px; }
 .nav-links { display: flex; gap: 32px; font-size: 14px; align-items: center; }
 .nav-links a:not(.btn) { color: var(--muted); transition: color .3s; font-weight: 500; }
 .nav-links a:not(.btn):hover,
@@ -228,7 +227,9 @@ section { padding: 110px 0; position: relative; }
   border: 1px solid var(--border);
   margin-bottom: 22px;
   font-size: 22px;
+  color: var(--cyan);
 }
+.service-icon svg { width: 22px; height: 22px; display: block; }
 a.service { display: block; color: inherit; }
 .service h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--text); }
 .service p { color: var(--muted); font-size: 14.5px; }

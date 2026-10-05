@@ -16,6 +16,8 @@ COPY index.html erp.html bas.html odoo.html /usr/share/nginx/html/
 COPY content.json /usr/share/nginx/html/content.json
 COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/
+COPY img/ /usr/share/nginx/html/img/
+COPY favicon.ico /usr/share/nginx/html/favicon.ico
 
 # Відкриваємо порт 80
 EXPOSE 80
