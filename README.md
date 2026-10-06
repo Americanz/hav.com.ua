@@ -7,10 +7,10 @@
 - `index.html` — головна
 - `erp.html`, `bas.html`, `odoo.html` — окремі сторінки напрямків
 - `avocado.html`, `trade.html`, `inventory.html` — підбренд Avocado, мобільні додатки
-- `loyalty.html` — система лояльності HAV
+- `loyalty.html` — Avocado Loyalty, мобільний додаток лояльності
 - `css/styles.css` — стилі
 - `js/main.js` — меню, анімації, відправка форми
-- `content.json` — статистика, послуги, стек, кейси, контакти і картки ERP / BAS / Odoo на головній
+- `content.json` — статистика, послуги, стек, кейси, контакти; на головній блок ERP містить картки BAS і Odoo
 - `leads/` — Telegram-бот на uv: приймає `POST /api/lead`, показує меню з кнопками і ставить статус заявки
 
 Email у `content.json` (`contact.email`) продубльовано в `index.html` (блок `noscript`) і в `js/main.js` (`FALLBACK_EMAIL`) — це запасний текст, якщо файл вмісту не відкрився.

@@ -67,10 +67,10 @@ class LeadTests(unittest.TestCase):
         content = json.loads((Path(__file__).resolve().parents[2] / "content.json").read_text(encoding="utf-8"))
         for key in ("hero", "stats", "services", "tech", "process", "cases", "contact", "footer"):
             self.assertIn(key, content)
-        self.assertEqual([item["title"] for item in content["systems"]["items"]], ["ERP", "BAS", "Odoo"])
+        self.assertEqual([item["title"] for item in content["systems"]["items"]], ["BAS", "Odoo"])
         self.assertEqual(
             [item["title"] for item in content["products"]["items"]],
-            ["Avocado Trade", "Avocado Inventory", "Лояльність"],
+            ["Avocado Trade", "Avocado Inventory", "Avocado Loyalty"],
         )
 
 

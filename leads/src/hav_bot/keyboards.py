@@ -11,11 +11,9 @@ def main_menu(site: str) -> InlineKeyboardMarkup:
             [InlineKeyboardButton(text="Залишити заявку", callback_data="menu:apply")],
             [
                 InlineKeyboardButton(text="ERP", url=f"{site}/erp"),
-                InlineKeyboardButton(text="BAS", url=f"{site}/bas"),
-                InlineKeyboardButton(text="Odoo", url=f"{site}/odoo"),
+                InlineKeyboardButton(text="Avocado", url=f"{site}/avocado"),
             ],
             [
-                InlineKeyboardButton(text="Avocado", url=f"{site}/avocado"),
                 InlineKeyboardButton(text="Лояльність", url=f"{site}/loyalty"),
             ],
             [InlineKeyboardButton(text="Сайт", url=site)],
@@ -38,7 +36,7 @@ def topic_keyboard() -> InlineKeyboardMarkup:
                 InlineKeyboardButton(text="Trade", callback_data="apply:topic:Avocado Trade"),
                 InlineKeyboardButton(text="Inventory", callback_data="apply:topic:Avocado Inventory"),
             ],
-            [InlineKeyboardButton(text="Лояльність", callback_data="apply:topic:Лояльність")],
+            [InlineKeyboardButton(text="Loyalty", callback_data="apply:topic:Avocado Loyalty")],
             [InlineKeyboardButton(text="Інше", callback_data="apply:topic:")],
         ]
     )
@@ -70,7 +68,7 @@ def lead_keyboard(lead: dict, site: str) -> InlineKeyboardMarkup:
         "Avocado": f"{site}/avocado",
         "Avocado Trade": f"{site}/trade",
         "Avocado Inventory": f"{site}/inventory",
-        "Лояльність": f"{site}/loyalty",
+        "Avocado Loyalty": f"{site}/loyalty",
     }
     if topic in pages:
         rows.append([InlineKeyboardButton(text=f"Сторінка {topic}", url=pages[topic])])

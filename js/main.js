@@ -111,8 +111,16 @@ function serviceIcon(name) {
 
 function serviceCard(item) {
   const card = item.href ? link(item.href, "service reveal") : el("article", "service reveal");
+  if (item.image) {
+    const shot = document.createElement("img");
+    shot.className = "service-shot";
+    shot.src = item.image;
+    shot.alt = "";
+    card.append(shot);
+  } else {
+    card.append(serviceIcon(item.icon));
+  }
   card.append(
-    serviceIcon(item.icon),
     el("h3", null, item.title),
     el("p", null, item.text),
   );

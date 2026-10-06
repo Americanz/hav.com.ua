@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Система лояльності — HAV</title>
+<title>Avocado Loyalty — HAV</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<meta name="description" content="Система лояльності HAV: картки, бонуси і правила для покупця. Працює разом із продажем в BAS, ERP або Odoo." />
+<meta name="description" content="Avocado Loyalty — мобільний додаток лояльності: картка покупця, бонуси і правила. Нарахування від продажу в BAS, ERP або Odoo." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body data-page="loyalty">
+<body class="theme-avocado" data-page="loyalty">
 
 <header id="header">
   <div class="container nav">
@@ -21,8 +21,6 @@
     <nav class="nav-links" id="navLinks">
       <a href="/#services">Послуги</a>
       <a href="/erp">ERP</a>
-      <a href="/bas">BAS</a>
-      <a href="/odoo">Odoo</a>
       <a href="/avocado">Avocado</a>
       <a href="/loyalty" class="is-active">Лояльність</a>
       <a href="#contact">Контакти</a>
@@ -37,14 +35,19 @@
 
 <main>
   <section class="page-hero">
-    <div class="container hero-inner">
-      <span class="badge">HAV</span>
-      <h1>Система <span>лояльності</span></h1>
-      <p class="lead">Картки, бонуси і правила для покупця. Нарахування йде від продажу в обліковій системі, а не з окремої бази клієнтів.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Обговорити лояльність →</a>
-        <a href="/" class="btn btn-ghost">На головну</a>
+    <div class="container hero-layout">
+      <div class="hero-inner">
+        <span class="badge">AVOCADO LOYALTY</span>
+        <h1>Додаток <span>лояльності</span></h1>
+        <p class="lead">Картка покупця, бонуси і правила в телефоні. Нарахування йде від продажу в BAS, ERP або Odoo, разом із Trade і Inventory.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Обговорити Loyalty →</a>
+          <a href="/avocado" class="btn btn-ghost">Усі додатки Avocado</a>
+        </div>
       </div>
+      <figure class="page-shot">
+        <img src="/img/avocado-loyalty.jpg" alt="Екран Avocado Loyalty: картка покупця і бонуси">
+      </figure>
     </div>
   </section>
 
@@ -52,7 +55,7 @@
     <div class="container">
       <span class="section-tag">Для бізнесу</span>
       <h2 class="section-title">Правила поруч із чеком</h2>
-      <p class="section-sub">Це продукт HAV, не додаток Avocado. Покупець користується карткою, ви керуєте правилами і бачите результат у тому ж обліку.</p>
+      <p class="section-sub">Покупець тримає картку в додатку. Ви керуєте правилами, а бонус сідає на той самий продаж, що й в обліку.</p>
       <div class="services-grid">
         <article class="service">
           <h3>Картки</h3>
@@ -72,7 +75,8 @@
         </article>
       </div>
       <div class="related">
-        <a href="/avocado">Додатки Avocado</a>
+        <a href="/trade">Avocado Trade</a>
+        <a href="/inventory">Avocado Inventory</a>
         <a href="/bas">Впровадження BAS</a>
       </div>
     </div>
@@ -83,11 +87,11 @@
       <div class="contact">
         <div class="center-copy">
           <span class="section-tag">Зв'язок</span>
-          <h2 class="section-title">Обговорити лояльність</h2>
+          <h2 class="section-title">Обговорити Avocado Loyalty</h2>
           <p class="section-sub" style="margin-bottom:0">Опишіть, як зараз нараховуєте бонуси і в якій системі проходить продаж. Відповімо протягом 24 годин.</p>
         </div>
         <form id="contactForm">
-          <input type="hidden" name="topic" value="Лояльність">
+          <input type="hidden" name="topic" value="Avocado Loyalty">
           <div class="hp" aria-hidden="true">
             <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
           </div>
@@ -115,8 +119,6 @@
         <ul>
           <li><a href="/#services">Послуги</a></li>
           <li><a href="/erp">ERP</a></li>
-          <li><a href="/bas">BAS</a></li>
-          <li><a href="/odoo">Odoo</a></li>
           <li><a href="/avocado">Avocado</a></li>
           <li><a href="/loyalty">Лояльність</a></li>
           <li><a href="/#contact">Контакти</a></li>

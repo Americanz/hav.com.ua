@@ -12,7 +12,7 @@ WINDOW_SEC = 15 * 60
 LIMIT = 5
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 STATUS_RE = re.compile(r"<b>Статус:</b> [^\n]+")
-TOPICS = {"", "ERP", "BAS", "Odoo", "Avocado", "Avocado Trade", "Avocado Inventory", "Лояльність"}
+TOPICS = {"", "ERP", "BAS", "Odoo", "Avocado", "Avocado Trade", "Avocado Inventory", "Avocado Loyalty"}
 
 _lock = threading.Lock()
 _hits: dict[str, list[float]] = {}
