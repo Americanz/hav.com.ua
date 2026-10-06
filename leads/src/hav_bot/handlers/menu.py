@@ -11,7 +11,7 @@ from hav_bot.keyboards import main_menu
 router = Router(name="menu")
 
 MENU_TEXT = (
-    "HAV — хмарна архітектура, ERP, BAS і Odoo.\n"
+    "HAV — хмарна архітектура, ERP, BAS, Odoo, Avocado і лояльність.\n"
     "Оберіть напрямок або залиште заявку кнопкою нижче."
 )
 

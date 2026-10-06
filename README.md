@@ -6,6 +6,8 @@
 
 - `index.html` — головна
 - `erp.html`, `bas.html`, `odoo.html` — окремі сторінки напрямків
+- `avocado.html`, `trade.html`, `inventory.html` — підбренд Avocado, мобільні додатки
+- `loyalty.html` — система лояльності HAV
 - `css/styles.css` — стилі
 - `js/main.js` — меню, анімації, відправка форми
 - `content.json` — статистика, послуги, стек, кейси, контакти і картки ERP / BAS / Odoo на головній

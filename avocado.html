@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Odoo — HAV</title>
+<title>Avocado — HAV</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<meta name="description" content="HAV впроваджує Odoo: CRM, продажі, склад, виробництво. Свої модулі, інтеграції і розміщення в хмарі." />
+<meta name="description" content="Avocado — мобільні додатки HAV для торгового представника та інвентаризації. Спільні довідники і обмін з обліковою системою." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body data-page="odoo">
+<body class="theme-avocado" data-page="avocado">
 
 <header id="header">
   <div class="container nav">
@@ -22,8 +22,8 @@
       <a href="/#services">Послуги</a>
       <a href="/erp">ERP</a>
       <a href="/bas">BAS</a>
-      <a href="/odoo" class="is-active">Odoo</a>
-      <a href="/avocado">Avocado</a>
+      <a href="/odoo">Odoo</a>
+      <a href="/avocado" class="is-active">Avocado</a>
       <a href="/loyalty">Лояльність</a>
       <a href="#contact">Контакти</a>
       <a href="#contact" class="btn btn-primary">Консультація</a>
@@ -38,11 +38,11 @@
 <main>
   <section class="page-hero">
     <div class="container hero-inner">
-      <span class="badge">ODOO</span>
-      <h1>Впровадження <span>Odoo</span> під ваші модулі</h1>
-      <p class="lead">Збираємо Odoo з тих застосунків, які потрібні компанії: CRM, продажі, склад, закупівлі, виробництво. Свої модулі, інтеграції і розміщення в хмарі — без закритої коробки.</p>
+      <span class="badge">AVOCADO</span>
+      <h1>Мобільні додатки <span>Avocado</span></h1>
+      <p class="lead">Два додатки для роботи в полі: торговий представник і інвентаризація. Спільні довідники товарів і клієнтів, обмін із BAS, ERP або Odoo.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Обговорити Odoo →</a>
+        <a href="#contact" class="btn btn-primary">Обговорити Avocado →</a>
         <a href="/" class="btn btn-ghost">На головну</a>
       </div>
     </div>
@@ -50,30 +50,23 @@
 
   <section>
     <div class="container">
-      <span class="section-tag">Що входить</span>
-      <h2 class="section-title">Система, яку можна розвивати</h2>
-      <p class="section-sub">Odoo лишається у вашому контурі: код, база і резервні копії не залежать від одного підрядника.</p>
+      <span class="section-tag">Додатки</span>
+      <h2 class="section-title">Одна марка, дві ролі</h2>
+      <p class="section-sub">Людина в полі і людина на перерахунку бачать різні екрани. Товари, склади і клієнти в них одні.</p>
       <div class="services-grid">
-        <article class="service">
-          <h3>Модулі</h3>
-          <p>Вмикаємо лише потрібне: CRM, продажі, склад, виробництво, закупівлі, кадри. Зайві застосунки не засмічують роботу.</p>
-        </article>
-        <article class="service">
-          <h3>Доопрацювання</h3>
-          <p>Свої модулі і зміни типових, якщо стандартного сценарію не вистачає. Логіка лишається у версіях, а не в ручних правках на сервері.</p>
-        </article>
-        <article class="service">
-          <h3>Інтеграції</h3>
-          <p>Сайт, платіжні сервіси, служби доставки, телефонія і зовнішня звітність. Odoo обмінюється даними, а не дублює їх руками.</p>
-        </article>
-        <article class="service">
-          <h3>Хмара</h3>
-          <p>Розміщення, оновлення, моніторинг і резервні копії. Той самий підхід, що й до решти інфраструктури HAV.</p>
-        </article>
+        <a class="service" href="/trade">
+          <h3>Avocado Trade</h3>
+          <p>Замовлення, клієнти і маршрут торгового представника. Під час візиту він працює з тими самими даними, що й облік.</p>
+          <span class="more">Детальніше →</span>
+        </a>
+        <a class="service" href="/inventory">
+          <h3>Avocado Inventory</h3>
+          <p>Перерахунок залишків на складі чи в торговій точці. Результат повертається в ту саму облікову систему.</p>
+          <span class="more">Детальніше →</span>
+        </a>
       </div>
       <div class="related">
-        <a href="/erp">Дивитись ERP</a>
-        <a href="/bas">Дивитись BAS</a>
+        <a href="/loyalty">Система лояльності HAV</a>
       </div>
     </div>
   </section>
@@ -83,11 +76,11 @@
       <div class="contact">
         <div class="center-copy">
           <span class="section-tag">Зв'язок</span>
-          <h2 class="section-title">Обговорити Odoo</h2>
-          <p class="section-sub" style="margin-bottom:0">Напишіть, які процеси хочете перенести. Відповімо протягом 24 годин.</p>
+          <h2 class="section-title">Обговорити Avocado</h2>
+          <p class="section-sub" style="margin-bottom:0">Напишіть, для кого додаток: торгового, складу чи обох. Відповімо протягом 24 годин.</p>
         </div>
         <form id="contactForm">
-          <input type="hidden" name="topic" value="Odoo">
+          <input type="hidden" name="topic" value="Avocado">
           <div class="hp" aria-hidden="true">
             <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
           </div>

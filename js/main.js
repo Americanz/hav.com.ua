@@ -54,6 +54,7 @@ function render(site) {
 
   fillSection("services", site.services, (item) => serviceCard(item));
   fillSection("systems", site.systems, (item) => serviceCard(item));
+  fillSection("products", site.products, (item) => serviceCard(item));
 
   const techCopy = site.tech || {};
   setText("techTag", techCopy.tag);

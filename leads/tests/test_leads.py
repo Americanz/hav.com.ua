@@ -68,6 +68,10 @@ class LeadTests(unittest.TestCase):
         for key in ("hero", "stats", "services", "tech", "process", "cases", "contact", "footer"):
             self.assertIn(key, content)
         self.assertEqual([item["title"] for item in content["systems"]["items"]], ["ERP", "BAS", "Odoo"])
+        self.assertEqual(
+            [item["title"] for item in content["products"]["items"]],
+            ["Avocado Trade", "Avocado Inventory", "Лояльність"],
+        )
 
 
 class HttpTests(unittest.IsolatedAsyncioTestCase):

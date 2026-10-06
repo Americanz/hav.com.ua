@@ -6,7 +6,7 @@ COPY nginx.main.conf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --chown=nginx:nginx \
-    index.html erp.html bas.html odoo.html content.json favicon.ico \
+    index.html erp.html bas.html odoo.html avocado.html trade.html inventory.html loyalty.html content.json favicon.ico \
     /usr/share/nginx/html/
 COPY --chown=nginx:nginx css /usr/share/nginx/html/css
 COPY --chown=nginx:nginx js /usr/share/nginx/html/js

@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Odoo — HAV</title>
+<title>Система лояльності — HAV</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<meta name="description" content="HAV впроваджує Odoo: CRM, продажі, склад, виробництво. Свої модулі, інтеграції і розміщення в хмарі." />
+<meta name="description" content="Система лояльності HAV: картки, бонуси і правила для покупця. Працює разом із продажем в BAS, ERP або Odoo." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body data-page="odoo">
+<body data-page="loyalty">
 
 <header id="header">
   <div class="container nav">
@@ -22,9 +22,9 @@
       <a href="/#services">Послуги</a>
       <a href="/erp">ERP</a>
       <a href="/bas">BAS</a>
-      <a href="/odoo" class="is-active">Odoo</a>
+      <a href="/odoo">Odoo</a>
       <a href="/avocado">Avocado</a>
-      <a href="/loyalty">Лояльність</a>
+      <a href="/loyalty" class="is-active">Лояльність</a>
       <a href="#contact">Контакти</a>
       <a href="#contact" class="btn btn-primary">Консультація</a>
     </nav>
@@ -38,11 +38,11 @@
 <main>
   <section class="page-hero">
     <div class="container hero-inner">
-      <span class="badge">ODOO</span>
-      <h1>Впровадження <span>Odoo</span> під ваші модулі</h1>
-      <p class="lead">Збираємо Odoo з тих застосунків, які потрібні компанії: CRM, продажі, склад, закупівлі, виробництво. Свої модулі, інтеграції і розміщення в хмарі — без закритої коробки.</p>
+      <span class="badge">HAV</span>
+      <h1>Система <span>лояльності</span></h1>
+      <p class="lead">Картки, бонуси і правила для покупця. Нарахування йде від продажу в обліковій системі, а не з окремої бази клієнтів.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Обговорити Odoo →</a>
+        <a href="#contact" class="btn btn-primary">Обговорити лояльність →</a>
         <a href="/" class="btn btn-ghost">На головну</a>
       </div>
     </div>
@@ -50,30 +50,30 @@
 
   <section>
     <div class="container">
-      <span class="section-tag">Що входить</span>
-      <h2 class="section-title">Система, яку можна розвивати</h2>
-      <p class="section-sub">Odoo лишається у вашому контурі: код, база і резервні копії не залежать від одного підрядника.</p>
+      <span class="section-tag">Для бізнесу</span>
+      <h2 class="section-title">Правила поруч із чеком</h2>
+      <p class="section-sub">Це продукт HAV, не додаток Avocado. Покупець користується карткою, ви керуєте правилами і бачите результат у тому ж обліку.</p>
       <div class="services-grid">
         <article class="service">
-          <h3>Модулі</h3>
-          <p>Вмикаємо лише потрібне: CRM, продажі, склад, виробництво, закупівлі, кадри. Зайві застосунки не засмічують роботу.</p>
+          <h3>Картки</h3>
+          <p>Покупець ідентифікується карткою. Його покупки вже є в BAS, ERP або Odoo, тому бонуси не живуть окремо.</p>
         </article>
         <article class="service">
-          <h3>Доопрацювання</h3>
-          <p>Свої модулі і зміни типових, якщо стандартного сценарію не вистачає. Логіка лишається у версіях, а не в ручних правках на сервері.</p>
+          <h3>Правила</h3>
+          <p>Нарахування і списання за вашими умовами: сума, група товарів, точка. Правило змінюється без правки обліку вручну.</p>
         </article>
         <article class="service">
-          <h3>Інтеграції</h3>
-          <p>Сайт, платіжні сервіси, служби доставки, телефонія і зовнішня звітність. Odoo обмінюється даними, а не дублює їх руками.</p>
+          <h3>Продаж</h3>
+          <p>Бонус чіпляється до документа продажу. Каса і облік бачать одну операцію.</p>
         </article>
         <article class="service">
-          <h3>Хмара</h3>
-          <p>Розміщення, оновлення, моніторинг і резервні копії. Той самий підхід, що й до решти інфраструктури HAV.</p>
+          <h3>Звіт</h3>
+          <p>Скільки нараховано, списано і хто повертається. Цифри беруться з тих самих продажів, що й управлінський облік.</p>
         </article>
       </div>
       <div class="related">
-        <a href="/erp">Дивитись ERP</a>
-        <a href="/bas">Дивитись BAS</a>
+        <a href="/avocado">Додатки Avocado</a>
+        <a href="/bas">Впровадження BAS</a>
       </div>
     </div>
   </section>
@@ -83,11 +83,11 @@
       <div class="contact">
         <div class="center-copy">
           <span class="section-tag">Зв'язок</span>
-          <h2 class="section-title">Обговорити Odoo</h2>
-          <p class="section-sub" style="margin-bottom:0">Напишіть, які процеси хочете перенести. Відповімо протягом 24 годин.</p>
+          <h2 class="section-title">Обговорити лояльність</h2>
+          <p class="section-sub" style="margin-bottom:0">Опишіть, як зараз нараховуєте бонуси і в якій системі проходить продаж. Відповімо протягом 24 годин.</p>
         </div>
         <form id="contactForm">
-          <input type="hidden" name="topic" value="Odoo">
+          <input type="hidden" name="topic" value="Лояльність">
           <div class="hp" aria-hidden="true">
             <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
           </div>
