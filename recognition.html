@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Розпізнавання документів — HAV</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="description" content="Розпізнавання документів HAV: бот або обробка ERP надсилає файл, черга повертає JSON за схемою, ERP створює документи. Рахунки, накладні, банківські виписки TXT і DBF." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="recognition">
+
+<header id="header">
+  <div class="container nav">
+    <a href="/" class="logo"><img src="/img/mark.png" alt="HAV"></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#services">Послуги</a>
+      <a href="/erp">ERP</a>
+      <a href="/avocado">Avocado</a>
+      <a href="/loyalty">Лояльність</a>
+      <a href="/recognition" class="is-active">Розпізнавання</a>
+      <a href="#contact">Контакти</a>
+      <a href="#contact" class="btn btn-primary">Консультація</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Консультація</a>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container hero-inner">
+      <span class="badge">РОЗПІЗНАВАННЯ</span>
+      <h1>Розпізнавання <span>документів</span> для ERP</h1>
+      <p class="lead">Бот або обробка в ERP надсилає файл. Сервіс ставить його в чергу, повертає JSON за схемою виду документа, і ERP створює документи.</p>
+      <div class="hero-cta">
+        <a href="https://doc-recognition.hav.com.ua" class="btn btn-primary">Перейти до сервісу →</a>
+        <a href="#contact" class="btn btn-ghost">Обговорити розпізнавання →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="section-tag">Сервіс</span>
+      <h2 class="section-title">Що робить</h2>
+      <p class="section-sub">Файл не набирають у ERP руками. Його приймає сервіс, а в облік потрапляє вже розкладений результат.</p>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Прийом файлу</h3>
+          <p>Бот або обробка в ERP надсилає файл на розпізнавання. Окремий ввід рядків у документ не потрібен.</p>
+        </article>
+        <article class="service">
+          <h3>Черга</h3>
+          <p>Файл стає в чергу розпізнавання і чекає обробки. Запит не тримає сесію ERP, поки сервіс читає документ.</p>
+        </article>
+        <article class="service">
+          <h3>JSON за схемою</h3>
+          <p>Результат — JSON за схемою виду документа. Поля рахунка, накладної чи виписки вже розкладені, а не звалені в один текст.</p>
+        </article>
+        <article class="service">
+          <h3>Документи в ERP</h3>
+          <p>ERP за цим JSON створює свої документи. Облік лишається в ERP, сервіс лише віддає розпізнані дані.</p>
+        </article>
+      </div>
+
+      <h2 class="section-title" style="margin-top:64px">Що розпізнає</h2>
+      <p class="section-sub">Схема залежить від виду документа. Зараз сервіс приймає рахунки, накладні і банківські виписки.</p>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Рахунки</h3>
+          <p>Постачальник, суми, податки і рядки рахунка. ERP створює документ із цих полів, а не з переписаного скана.</p>
+        </article>
+        <article class="service">
+          <h3>Накладні</h3>
+          <p>Номенклатура, кількість і сторони накладної. Дані сідають у документ ERP за тією самою схемою виду.</p>
+        </article>
+        <article class="service">
+          <h3>Банківські виписки</h3>
+          <p>Виписки у форматах TXT і DBF. Рухи розкладаються в JSON, і ERP створює документи за платежами.</p>
+        </article>
+      </div>
+
+      <h2 class="section-title" style="margin-top:64px">Як це працює</h2>
+      <p class="section-sub">Один ланцюжок для бота і для обробки в ERP. Відрізняється лише те, хто надсилає файл.</p>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Надсилання</h3>
+          <p>Бот або обробка в ERP передає файл і називає компанію токеном. Сервіс не вгадує, чий це документ.</p>
+        </article>
+        <article class="service">
+          <h3>Черга розпізнавання</h3>
+          <p>Файл стає в чергу. Обробка йде своїм кроком, без очікування у вікні користувача.</p>
+        </article>
+        <article class="service">
+          <h3>Схема виду</h3>
+          <p>Розпізнавання збирає поля за схемою цього виду документа: рахунок, накладна або банківська виписка.</p>
+        </article>
+        <article class="service">
+          <h3>Створення в ERP</h3>
+          <p>Готовий JSON повертається в ERP. ERP створює документи і лишається джерелом обліку.</p>
+        </article>
+      </div>
+
+      <h2 class="section-title" style="margin-top:64px">Безпека</h2>
+      <p class="section-sub">Компанія відокремлена токеном. Секрети зашифровані, файли лежать у сховищі.</p>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Токен компанії</h3>
+          <p>Запит іде із заголовком X-Company-Token. Сервіс прив'язує файл і результат до цієї компанії.</p>
+        </article>
+        <article class="service">
+          <h3>Зашифровані секрети</h3>
+          <p>Секрети зберігаються зашифрованими. У відповіді з розпізнаними полями їх немає.</p>
+        </article>
+        <article class="service">
+          <h3>Файли в сховищі</h3>
+          <p>Файли лежать у сховищі сервісу, а не в листуванні і не в тимчасовій теці на чиємусь комп'ютері.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div class="center-copy">
+          <span class="section-tag">Зв'язок</span>
+          <h2 class="section-title">Обговорити розпізнавання</h2>
+          <p class="section-sub" style="margin-bottom:0">Напишіть, які документи треба забирати в ERP. Відповімо протягом 24 годин.</p>
+        </div>
+        <form id="contactForm">
+          <input type="hidden" name="topic" value="Розпізнавання">
+          <div class="hp" aria-hidden="true">
+            <label>Не заповнюйте<input type="text" name="hp" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <label class="field"><span>Ім'я</span><input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" maxlength="120" required></label>
+          <label class="field"><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" maxlength="40"></label>
+          <label class="field"><span>Задача</span><textarea name="message" rows="4" maxlength="4000"></textarea></label>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Відправити запит →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="/img/logo.png" alt="HAV"></div>
+        <p id="footerTagline">Cloud Architecture Technologies. Архітектура майбутнього для вашого бізнесу.</p>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="/#services">Послуги</a></li>
+          <li><a href="/erp">ERP</a></li>
+          <li><a href="/avocado">Avocado</a></li>
+          <li><a href="/loyalty">Лояльність</a></li>
+          <li><a href="/recognition">Розпізнавання</a></li>
+          <li><a href="/#contact">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul id="footerContacts">
+          <li><a href="mailto:hello@hav.com.ua">hello@hav.com.ua</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span id="copyright"></span>
+      <span id="footerSite"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

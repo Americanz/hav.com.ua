@@ -8,6 +8,7 @@
 - `erp.html`, `bas.html`, `odoo.html` — окремі сторінки напрямків
 - `avocado.html`, `trade.html`, `inventory.html` — підбренд Avocado, мобільні додатки
 - `loyalty.html` — Avocado Loyalty, мобільний додаток лояльності
+- `recognition.html` — розпізнавання документів, сторінка `/recognition`
 - `css/styles.css` — стилі
 - `js/main.js` — меню, анімації, відправка форми
 - `content.json` — статистика, послуги, стек, кейси, контакти; на головній блок ERP містить картки BAS і Odoo
